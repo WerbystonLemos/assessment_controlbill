@@ -57,12 +57,14 @@
                         <td>{{ $bill->obs }}</td>
                         <td>{{ $bill->responsavel }}</td>
                         <td>
-                            <button class="btn btn-sm btn-warning">
-                                <i class="bi bi-pencil-square"></i>
-                            </button>
-                            <button class="btn btn-sm btn-danger">
-                                <i class="bi bi-trash"></i>
-                            </button>
+                            @can('level')
+                                <button class="btn btn-sm btn-warning">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
+                                <button class="btn btn-sm btn-danger">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            @endcan
                         </td>
                     </tr>
                 @endforeach
