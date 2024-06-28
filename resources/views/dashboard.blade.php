@@ -16,7 +16,7 @@
     </div> --}}
     <div id="containerMain" class="container-fluid">
 
-        <table class="table">
+        <table class="table table-striped table-hover">
             <thead>
                 <tr>
                     <th>#ID</th>
@@ -41,12 +41,14 @@
                         <td>{{ $bill->descricao }}</td>
                         <td>{{ $bill->vencimento }}</td>
                         <td title={{$bill->status}}>
-                            <i class="bi {{
-                            ($bill->status == "aberto")
+                            <button class="btn btn-lg">
+                                <i class="bi {{
+                                ($bill->status == "aberto")
                                 ? 'bi-ban text-danger'
                                 : 'bi-check2-circle text-success'
-                            }}">
-                            </i>
+                                }}">
+                                </i>
+                            </button>
                         </td>
                         <td>{{ $bill->vlr_parcela }}</td>
                         <td>{{ $bill->qtd_parcelas }}</td>
