@@ -1,66 +1,100 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Como parte de nossa avaliação, estamos convidando você para participar de um teste prático de desenvolvimento. Este teste foi cuidadosamente elaborado para nos permitir avaliar suas habilidades técnicas, criatividade e aderência às boas práticas de programação, incluindo os princípios SOLID e DRY.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Detalhes do Teste:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+Objetivo: Desenvolver uma aplicação web que demonstre sua capacidade de criar soluções eficazes e bem estruturadas utilizando Laravel 10, MySQL, MongoDB e Vue.js.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Requisitos:
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+Desenvolver uma aplicação web pequena, mas funcional, que possa ser utilizada para gerenciar um aspecto específico de um negócio ou de uma atividade. Por exemplo, um sistema de gestão de tarefas, um catálogo de produtos, ou um sistema de reservas.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Requisitos Técnicos
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+Backend: Desenvolvido com Laravel 10, utilizando MySQL para dados relacionais e MongoDB para dados não-relacionais.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Frontend: Algumas funcionalidades devem ser implementadas com Vue.js para criar uma experiência interativa no lado do cliente.
 
-## License
+Autenticação e Autorização: Implementar funcionalidades de login/logout e restrição de acesso com base em diferentes tipos de usuários (por exemplo, administrador e usuário regular).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+3. Critérios de Avaliação
+
+
+
+Qualidade do Código: Clareza, manutenção, e a organização do código, seguindo os princípios SOLID e DRY.
+
+Estrutura do Projeto: Organização dos arquivos e pastas, nomes de classes e métodos claros e descritivos.
+
+Implementação do Laravel: Uso eficaz de rotas, controllers, models, migrations, seeders, e middlewares.
+
+Integração com Banco de Dados: Modelagem e acesso a dados com MySQL e MongoDB, incluindo relações, consultas eficientes e uso de Eloquent ORM.
+
+Frontend com Vue.js: Implementação de componentes dinâmicos, comunicação com o backend via AJAX, e reatividade.
+
+Segurança: Implementação de medidas de segurança, como proteção contra CSRF, XSS, e injeção de SQL.
+
+Documentação: Incluir um README detalhado com instruções para configurar e executar o projeto, além de uma descrição das escolhas técnicas feitas.
+
+
+
+4. Tarefa Prática
+
+Propor uma tarefa que englobe os aspectos acima, como:
+
+
+
+Desenvolver um sistema de gerenciamento de tarefas.
+
+
+
+Funcionalidades:
+
+Criação, edição, exclusão, e listagem de tarefas.
+
+Atribuição de tarefas a usuários específicos.
+
+Marcação de tarefas como concluídas.
+
+Extras:
+
+Implementar filtros de visualização (por exemplo, tarefas concluídas, pendentes, por usuário).
+
+Utilizar Vue.js para criar uma interface dinâmica para a edição e atualização de tarefas sem necessidade de recarregar a página.
+
+Avaliação:
+
+Seremos atentos à qualidade do código, estrutura do projeto, utilização das tecnologias solicitadas, implementação das funcionalidades e documentação fornecida.
+
+
+
+5. Entrega e Apresentação
+
+Deverá ser fornecido o código-fonte via um repositório Git (por exemplo, GitHub, GitLab).
+
+Breve apresentação do projeto, explicando as decisões de design, desafios enfrentados e como eles foram superados.
+
+
+
+O teste deverá ser enviado no email: freire.joe@gmail.com.
+
+
+
+Este teste não apenas avalia a capacidade técnica em trabalhar com Laravel e tecnologias associadas, mas também demonstrar sua capacidade de pensar de forma analítica e criativa ao resolver problemas e projetar uma solução.
+
+
+
+Por favor, confirme o recebimento deste e-mail e sua participação no teste. O teste deverá ser realizado até o dia 30/06/2024. Caso tenha qualquer dúvida ou necessite de esclarecimentos adicionais, não hesite em entrar em contato conosco.
+
