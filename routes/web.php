@@ -30,6 +30,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/registerBill', [ControllerBill::class, 'index'])->name('registerBill');
+    Route::post('/registerBill', [ControllerBill::class, 'store'])->name('registerBill.save');
     Route::put('/registerBill/edit', [ControllerBill::class, 'update'])->name('registerBill.edit');
 });
 
