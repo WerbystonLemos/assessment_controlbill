@@ -5,16 +5,7 @@
         </h2>
     </x-slot>
 
-    {{-- <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <div id="containerMain" class="container-fluid">
+   <div id="containerMain" class="container-fluid">
 
         <table class="table table-striped table-hover">
             <thead>
@@ -61,7 +52,7 @@
                                 <button class="btn btn-sm btn-warning" onclick="showModal('modaleditar', {{ $bill }})">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
-                                <button class="btn btn-sm btn-danger">
+                                <button class="btn btn-sm btn-danger" onclick="showModalAskDeleteBill({{$bill->id}})">
                                     <i class="bi bi-trash"></i>
                                 </button>
                             @endcan
@@ -74,6 +65,7 @@
     </div>
 
     <x-dashboard-edit-modal />
+    <x-dashboard-delete-modal />
 
 </x-app-layout>
 

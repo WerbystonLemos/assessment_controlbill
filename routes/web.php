@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/registerBill', [ControllerBill::class, 'index'])->name('registerBill');
     Route::post('/registerBill', [ControllerBill::class, 'store'])->name('registerBill.save');
     Route::put('/registerBill/edit', [ControllerBill::class, 'update'])->name('registerBill.edit');
+    Route::delete('/registerBill/{id}', [ControllerBill::class, 'destroy']);
 });
 
 Route::middleware('auth')->group(function () {

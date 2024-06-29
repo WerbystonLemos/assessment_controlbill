@@ -15,11 +15,24 @@ function showModal(idModal, dadosInput)
     $(`#input_observacao`).val(dadosInput.obs)
 }
 
+function showModalAskDeleteBill(id)
+{
+    $(`#idBillDelete`).modal('show');
+    $(`#input_idBillDelete`).val(id);
+}
 
+function deleteBill()
+{
+    let idBill = $("#input_idBillDelete").val()
 
+    $.ajax({
+        url: `/registerBill/${idBill}`,
+        method: 'delete',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+        }
+    })
 
+    window.location.href = '/dashboard'
 
-
-
-
-
+}
