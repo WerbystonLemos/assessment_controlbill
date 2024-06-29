@@ -58,7 +58,7 @@
                         <td>{{ $bill->responsavel }}</td>
                         <td>
                             @can('level')
-                                <button class="btn btn-sm btn-warning">
+                                <button class="btn btn-sm btn-warning" onclick="showModal('modaleditar', {{ $bill }})">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
                                 <button class="btn btn-sm btn-danger">
@@ -72,5 +72,9 @@
         </table>
 
     </div>
+
+    <x-dashboard-edit-modal />
+
 </x-app-layout>
 
+<script src={{asset("./js/dashboard.js")}}></script>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Bill;
 
 class ControllerBill extends Controller
 {
@@ -50,9 +51,21 @@ class ControllerBill extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        $bill = Bill::find($request->input_id);
+        $bill->sacador      = $request->input_sacador;
+        $bill->descricao    = $request->input_descricao;
+        $bill->vlr_total    = $request->input_vlr_total;
+        $bill->vlr_parcela  = $request->input_vlr_parcela;
+        $bill->vencimento   = $request->input_dt_vencimento;
+        $bill->qtd_parcelas = $request->input_qtd_parcelas;
+        $bill->dt_pagamento = $request->input_dt_pagamento;
+        $bill->status       = $request->input_status;
+        $bill->responsavel  = $request->input_responsavel;
+        $bill->obs          = $request->input_observacao;
+        $bill->save();
+        return redirect('dashboard');
     }
 
     /**
