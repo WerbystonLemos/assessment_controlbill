@@ -30,9 +30,12 @@ function deleteBill()
         method: 'delete',
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-        }
+        },
+        success: (res) =>{
+            window.location.href = '/dashboard'
+        },
+        error: (err) => console.log(err)
     })
 
-    window.location.href = '/dashboard'
 
 }

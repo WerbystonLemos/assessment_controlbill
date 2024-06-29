@@ -85,6 +85,6 @@ class ControllerBill extends Controller
      */
     public function destroy($id)
     {
-        Bill::destroy($id);
+        return Bill::where('id', $id)->delete();
     }
 }
