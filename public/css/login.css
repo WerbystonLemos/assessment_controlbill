@@ -1,0 +1,23 @@
+body > div
+{
+    background-image: url("../img/bg.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0;
+}
+#containerLogo img
+{
+    width: 100px;
+    border-radius: 500px;
+}
+#divForm
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 100vh;
+    background-color: rgba(74, 75, 117, 0.5);/*var(--var-quarta);*/
+    padding: 0 20px;
+}

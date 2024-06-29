@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root
+{
+    --var-primeira: #3C3ECA;
+    --var-segunda:  #4A4BA0;
+    --var-terca:    #2023F5;
+    --var-quarta:   #4A4B75;
+    --var-quinta:   #3C3C4B;
+    --var-sexta:    #2B2B33;
+
+    /* --var-sucesso:  2B2F33; */
+    /* --var-alerta:   2B2F33; */
+    /* --var-aviso:    2B2F33; */
+    --var-padrao:    #1F2937;
+}
