@@ -20,16 +20,14 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
+
 Route::get('/', function () {
     return redirect('login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard', ['bills' => Bill::orderBy('id', 'desc')->get()]);
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
-    Route::get('/registerBill', [ControllerBill::class, 'index'])->name('registerBill');
+    Route::get('/dashboard', [ControllerBill::class, 'index'])->name('home');
+    Route::get('/registerBill', [ControllerBill::class, 'create'])->name('registerBill');
     Route::post('/registerBill', [ControllerBill::class, 'store'])->name('registerBill.save');
     Route::put('/registerBill/edit', [ControllerBill::class, 'update'])->name('registerBill.edit');
     Route::delete('/registerBill/{id}', [ControllerBill::class, 'destroy']);

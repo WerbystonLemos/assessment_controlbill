@@ -66,7 +66,7 @@
 
     </div>
 
-    <x-dashboard-edit-modal />
+    <x-dashboard.dashboard-edit-modal :users="$users"/>
     <x-dashboard-delete-modal />
 
 </x-app-layout>

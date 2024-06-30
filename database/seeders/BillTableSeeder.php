@@ -14,7 +14,7 @@ class BillTableSeeder extends Seeder
     private $fornecedores   = ["TechNova Solutions", "InnoSphere Technologies", "CyberWave Innovations", "QuantumLeap Systems", "FutureFusion Tech", "Vertex Digital", "PixelPulse IT", "NexGen Software", "Skyline Technologies", "BlueArc Networks"];
     private $descricoes = [
         "Software empresarial personalizado.", "Soluções de IA.", "Segurança cibernética avançada.", "Computação quântica.", "IoT dispositivos.", "Desenvolvimento web.", "Design gráfico.", "Aplicativos móveis.", "Cloud computing.", "Infraestrutura de rede." ];
-
+    private $responsaveis = ['admin', 'user'];
     /**
      * Run the database seeds.
      */
@@ -33,7 +33,7 @@ class BillTableSeeder extends Seeder
                     'qtd_parcelas'  => rand(2, 1200),
                     'dt_pagamento'  => $dates,
                     'status'        => $this->status[rand(0,1)],
-                    'responsavel'   => $this->nome[rand(0,3)],
+                    'responsavel'   => $this->responsaveis[rand(0,1)],
                     'obs'           => Str::random(20),
                 ]
             ]);

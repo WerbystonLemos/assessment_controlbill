@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Bill;
+use App\Models\User;
 
 class ControllerBill extends Controller
 {
@@ -13,7 +14,7 @@ class ControllerBill extends Controller
      */
     public function index()
     {
-        return view("registerBill");
+        return view('dashboard', ['bills' => Bill::orderBy('id', 'desc')->get(), 'users' => User::get() ]);
     }
 
     /**
@@ -21,7 +22,7 @@ class ControllerBill extends Controller
      */
     public function create()
     {
-        //
+        return view("registerBill", ['users' => User::all()]);
     }
 
     /**
@@ -54,7 +55,7 @@ class ControllerBill extends Controller
         $bill->responsavel  = $request->input_responsavel;
         $bill->obs          = $request->input_observacao;
         $bill->save();
-        return redirect('dashboard');
+        return $this->index();
     }
 
     /**

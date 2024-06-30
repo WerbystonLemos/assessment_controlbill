@@ -2,3 +2,7 @@
 {
     padding: 10px;
 }
+.form-control
+{
+    border-color: none !important;
+}

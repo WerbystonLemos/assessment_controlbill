@@ -6,7 +6,7 @@
             <div class="">
                 <!-- Logo -->
                 <div id="containerLogo" class="">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('home') }}">
                         <div>
                             <img src="{{asset('./img/logo.jpg')}}" />
                         </div>
@@ -65,7 +65,7 @@
     <!-- Responsive Navigation Menu -->
     <div id="containerMenuResponisive" :class="{'block': open, 'hidden': ! open}" class="hidden md:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 <i class="bi bi-bar-chart-fill"></i> {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('registerBill')" :active="request()->routeIs('registerBill')">
