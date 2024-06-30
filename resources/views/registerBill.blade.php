@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset('./css/index.css') }}">
+<link rel="stylesheet" href="{{ asset('./css/dashboard.css') }}">
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -75,6 +77,3 @@
     </div>
 
 </x-app-layout>
-
-<script src={{ asset("./js/registerBill.js") }}></script>
-

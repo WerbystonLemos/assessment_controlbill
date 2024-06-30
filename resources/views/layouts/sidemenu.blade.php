@@ -4,12 +4,12 @@
     <ul>
         <a href="{{ route('dashboard')}}">
             <li>
-                Dashboard
+                <i class="bi bi-bar-chart-fill"></i> Dashboard
             </li>
         </a>
         <a href="{{ route('registerBill') }}">
             <li>
-                Cadastrar Despesas
+                <i class="bi bi-plus-circle-fill"></i> Cadastrar Despesas
             </li>
         </a>
     </ul>
