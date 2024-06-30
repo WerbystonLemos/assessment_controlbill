@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard', ['bills' => Bill::all()]);
+    return view('dashboard', ['bills' => Bill::orderBy('id', 'desc')->get()]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

@@ -29,6 +29,19 @@ class ControllerBill extends Controller
      */
     public function store(Request $request)
     {
+        $validacao = $request->validate([
+            'input_sacador'       => ['required','string'],
+            'input_descricao'     => ['required','string'],
+            'input_vlr_total'     => ['required'],
+            'input_vlr_parcela'   => ['required'],
+            'input_dt_vencimento'    => ['required'],
+            'input_qtd_parcelas'  => ['required','integer'],
+            'input_dt_pagamento'  => ['required'],
+            'input_status'        => ['required','string'],
+            'input_responsavel'   => ['required','string'],
+            'input_obs'           => ['string']
+        ]);
+
         $bill = new Bill();
         $bill->sacador      = $request->input_sacador;
         $bill->descricao    = $request->input_descricao;
