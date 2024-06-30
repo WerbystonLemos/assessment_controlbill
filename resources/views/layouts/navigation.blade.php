@@ -1,27 +1,19 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 ">
+<link rel="stylesheet" href="{{ asset('./css/navigation.css') }}">
+<nav x-data="{ open: false }" class="">
     <!-- Primary Navigation Menu -->
-    <div class=" px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
+    <div id="containerNavigation" class="">
+        <div class="h-16">
+            <div class="">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div id="containerLogo" class="">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                        <div>
+                            <img src="{{asset('./img/logo.jpg')}}" />
+                        </div>
                     </a>
+                    <p>CONTROLBILL</p>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboards') }}
-                    </x-nav-link>
-
-                    <x-nav-link -- :href="route('registerBill')" :active="request()->routeIs('registerBill')">
-                        {{ __('Cadastrar Despesas') }}
-                    </x-nav-link>
-
-                </div>
             </div>
 
             <!-- Settings Dropdown -->

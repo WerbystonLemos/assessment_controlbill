@@ -17,9 +17,19 @@
  */
 #containerPrincipal
 {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: calc(100vh - 4rem);
+    height: 100vh;
+}
+#containerMain
+{
+    background-image: url(../img/bg.jpg);
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: auto;
+}
+.appBladeContainer
+{
+    /* height: 100vh; */
 }
 :root
 {
@@ -33,5 +43,6 @@
     /* --var-sucesso:  2B2F33; */
     /* --var-alerta:   2B2F33; */
     /* --var-aviso:    2B2F33; */
-    --var-padrao:    #1F2937;
+    --var-escuro:    #46494e;
+    --var-claro:    #cad1db;
 }

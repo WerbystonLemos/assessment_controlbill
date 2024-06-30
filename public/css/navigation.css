@@ -1,0 +1,30 @@
+#containerNavigation
+{
+    background: var(--var-segunda);
+    padding: 0 10px;
+    border-bottom: 1px solid var(--var-escuro);
+    color: var(--var-claro);
+}
+#containerNavigation > div
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#containerLogo
+{
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#containerLogo img
+{
+    border-radius: 100px;
+    width: 55px;
+}
+#containerLogo p
+{
+    margin-left: 10px;
+    font-size: bolder;
+}

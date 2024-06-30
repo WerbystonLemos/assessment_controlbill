@@ -1,0 +1,27 @@
+aside#asideMenu
+{
+    background: var(--var-segunda);
+    /* height: calc(100vh - 4rem); */
+}
+aside#asideMenu ul
+{
+    margin-top: 15px;
+}
+aside#asideMenu li
+{
+    padding: 10px 5px;
+    transition: 0.3s all;
+    color: var(--var-claro);
+}
+aside#asideMenu li:hover
+{
+    padding-left: 15px;
+    background-color: var(--var-claro);
+    color: var(--var-escuro);
+    transition: 0.5s all;
+}
+aside#asideMenu a
+{
+    transition: 0.5s all;
+}
+

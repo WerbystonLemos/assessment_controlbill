@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset('./css/index.css') }}">
+<link rel="stylesheet" href="{{ asset('./css/dashboard.css') }}">
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -5,33 +7,33 @@
         </h2>
     </x-slot>
 
-   <div id="containerMain" class="container-fluid">
+   <div id="containerContentDashboard" class="container-fluid">
 
         <table class="table table-striped table-hover">
             <thead>
-                <tr>
-                    <th>#ID</th>
-                    <th>SACADOR</th>
-                    <th>DESCRIÇÃO</th>
-                    <th>VENCIMENTO</th>
-                    <th>STATUS</th>
-                    <th>VLR PARCELA</th>
-                    <th>QTD PARCELAS</th>
-                    <th>VLR TOTAL</th>
-                    <th>DATA PAGAMENTO</th>
-                    <th>COMENTÁRIOS</th>
-                    <th>RESPONSÁVEL</th>
-                    <th>AÇÔES</th>
+                <tr class="small">
+                    <th class="small">#ID</th>
+                    <th class="small">SACADOR</th>
+                    <th class="small">DESCRIÇÃO</th>
+                    <th class="small">VENCIMENTO</th>
+                    <th class="small">STATUS</th>
+                    <th class="small">R$ PARCELA</th>
+                    <th class="small">QTD PARCELAS</th>
+                    <th class="small">R$ TOTAL</th>
+                    <th class="small">DATA PAGAMENTO</th>
+                    <th class="small">COMENTÁRIOS</th>
+                    <th class="small">RESPONSÁVEL</th>
+                    <th class="small">AÇÔES</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach( $bills as $bill )
                     <tr>
-                        <td>{{ $bill->id }}</td>
-                        <td>{{ $bill->sacador }}</td>
-                        <td>{{ $bill->descricao }}</td>
-                        <td>{{ $bill->vencimento }}</td>
-                        <td title={{$bill->status}}>
+                        <td class="small">{{ $bill->id }}</td>
+                        <td class="small">{{ $bill->sacador }}</td>
+                        <td class="small">{{ $bill->descricao }}</td>
+                        <td class="small">{{ $bill->vencimento }}</td>
+                        <td class="small text-center" title={{$bill->status}}>
                             <button class="btn btn-lg">
                                 <i class="bi {{
                                 ($bill->status == "aberto")
@@ -41,13 +43,13 @@
                                 </i>
                             </button>
                         </td>
-                        <td>{{ $bill->vlr_parcela }}</td>
-                        <td>{{ $bill->qtd_parcelas }}</td>
-                        <td>{{ $bill->vlr_total }}</td>
-                        <td>{{ $bill->dt_pagamento }}</td>
-                        <td>{{ $bill->obs }}</td>
-                        <td>{{ $bill->responsavel }}</td>
-                        <td>
+                        <td class="small text-center">{{ $bill->vlr_parcela }}</td>
+                        <td class="small text-center">{{ $bill->qtd_parcelas }}</td>
+                        <td class="small text-center">{{ $bill->vlr_total }}</td>
+                        <td class="small text-center">{{ $bill->dt_pagamento }}</td>
+                        <td class="small">{{ $bill->obs }}</td>
+                        <td class="small">{{ $bill->responsavel }}</td>
+                        <td class="small">
                             @can('level')
                                 <button class="btn btn-sm btn-warning" onclick="showModal('modaleditar', {{ $bill }})">
                                     <i class="bi bi-pencil-square"></i>
