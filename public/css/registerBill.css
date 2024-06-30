@@ -1,0 +1,8 @@
+#containerMain
+{
+    padding: 200px;
+}
+.form-control
+{
+    border: 1px solid rgba(rgb(74, 75, 160, 0.4)) !important;
+}

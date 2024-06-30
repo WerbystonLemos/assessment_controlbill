@@ -40,9 +40,18 @@
     --var-quinta:   #3C3C4B;
     --var-sexta:    #2B2B33;
 
-    /* --var-sucesso:  2B2F33; */
-    /* --var-alerta:   2B2F33; */
-    /* --var-aviso:    2B2F33; */
     --var-escuro:    #46494e;
     --var-claro:    #cad1db;
+}
+
+.btn-primeiro
+{
+    background-color: var(--var-segunda);
+    color: var(--var-claro);
+}
+
+.wbtn
+{
+    padding: 7px 10px;
+    border-radius: 5px;
 }
