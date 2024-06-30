@@ -23,7 +23,6 @@ return new class extends Migration
             $table->enum('status', ['pago', 'aberto'])->nullable(false);
             $table->string('responsavel');
             $table->string('obs')->nullable(false);
-            $table->date('update_at');
             $table->timestamps();
         });
     }
